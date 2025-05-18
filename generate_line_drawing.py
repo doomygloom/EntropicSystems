@@ -2,6 +2,8 @@ from PIL import Image, ImageDraw
 import random
 import math
 
+# X:@owldecoy
+
 def generate_line_drawing(input_path, output_path, num_lines=50, line_thickness=1, line_length=100, anti_alias=True):
   
         base_image = Image.open(input_path)
