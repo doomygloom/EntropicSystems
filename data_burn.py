@@ -1,6 +1,8 @@
 from PIL import Image, ImageDraw, ImageFilter
 import random
 
+# X:@owldecoy
+
 def data_burn(input_path, output_path, num_burns=None, burn_length=None, dark_burn=False, light_burn=False):
 
         image = Image.open(input_path)
