@@ -1,5 +1,7 @@
 from PIL import Image
 
+# X: @owldecoy
+
 def invert_colors(input_path, output_path):
 
         image = Image.open(input_path)
