@@ -1,6 +1,8 @@
 from PIL import Image, ImageDraw, ImageFilter
 import random
 
+# X:@owldecoy
+
 def cut_and_shuffle(input_path, output_path, num_pieces=None, edge_thickness=10, max_piece_size=100, blur_edges=False):
     image = Image.open(input_path)
     if image.mode != 'RGB':
