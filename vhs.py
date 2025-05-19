@@ -3,7 +3,20 @@ import numpy as np
 import random
 
 # X: @owldecoy
+
 def vhs(input_path, output_path, noise_level=25, line_freq=0.05, jitter_strength=5, tracking_lines=True):
+    """
+    Applies a VHS-style effect to an image by adding noise, color channel shifts, and optional tracking lines.
+
+    Args:
+        input_path (str): The file path to the input image.
+        output_path (str): The file path where the modified image will be saved in JPEG format.
+        noise_level (int, optional): The standard deviation of the Gaussian noise to be added. Default is 25.
+        line_freq (float, optional): The frequency of tracking lines (0.0 to 1.0). Default is 0.05.
+        jitter_strength (int, optional): The maximum pixel shift for horizontal jitter effect. Default is 5 pixels.
+        tracking_lines (bool, optional): Whether to add random horizontal tracking lines. Default is True.
+    """
+
     image = Image.open(input_path)
     if image.mode != 'RGB':
         image = image.convert('RGB')
