@@ -4,6 +4,15 @@ import random
 # X: @owldecoy
 
 def lineator(input_path, output_path, num_lines=None):
+    """
+    Reorganizes the image by slicing it into horizontal lines and randomly shuffling the lines.
+
+    Args:
+        input_path (str): The file path to the input image.
+        output_path (str): The file path where the modified image will be saved in JPEG format.
+        num_lines (int, optional): The number of horizontal lines to divide the image into. Default is the entire image height in pixels.
+    """
+
         image = Image.open(input_path)
         if image.mode != 'RGB':
                 image = image.convert('RGB')
@@ -25,6 +34,17 @@ def lineator(input_path, output_path, num_lines=None):
 
 
 def lineator_area(input_path, output_path, num_lines=None, area_width=200, area_height=200):
+    """
+    Applies the lineator effect to a randomly selected rectangular area of the image by slicing it into horizontal lines and shuffling them.
+
+    Args:
+        input_path (str): The file path to the input image.
+        output_path (str): The file path where the modified image will be saved in JPEG format.
+        num_lines (int, optional): The number of horizontal lines to divide the selected area into. Default is 20.
+        area_width (int, optional): The width of the rectangular area to be processed. Default is 200 pixels.
+        area_height (int, optional): The height of the rectangular area to be processed. Default is 200 pixels.
+    """
+
 
         image = Image.open(input_path)
         if image.mode != 'RGB':
