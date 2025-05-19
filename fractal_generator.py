@@ -2,7 +2,19 @@ import random
 import numpy as np
 from PIL import Image
 
+# X: @owldecoy
+
 def fractal_generator(input_path, output_path, tile_size=10, max_iter=20, blend_factor=0.7):
+    """
+    Generates a fractal effect by sampling and blending image tiles in a specified region of the image.
+
+    Args:
+        input_path (str): The file path to the input image.
+        output_path (str): The file path where the modified image will be saved in JPEG format.
+        tile_size (int, optional): The size of the tiles used for sampling and generating the fractal effect. Default is 10.
+        max_iter (int, optional): The maximum number of iterations for fractal generation. Default is 20.
+        blend_factor (float, optional): The blending factor between the generated fractal area and the original area, ranging from 0.0 to 1.0. Default is 0.7.
+    """
        
         image = Image.open(input_path)
         if image.mode != 'RGB':
