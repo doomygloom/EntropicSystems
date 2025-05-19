@@ -5,6 +5,17 @@ import math
 # X:@owldecoy
 
 def generate_line_drawing(input_path, output_path, num_lines=50, line_thickness=1, line_length=100, anti_alias=True):
+    """
+    Generates a line drawing effect on the input image by drawing random lines with varying styles and directions.
+
+    Args:
+        input_path (str): The file path to the input image.
+        output_path (str): The file path where the modified image will be saved in JPEG format.
+        num_lines (int, optional): The number of lines to be drawn. Default is 50.
+        line_thickness (int, optional): The thickness of each line in pixels. Default is 1.
+        line_length (int, optional): The length of each line in pixels. Default is 100.
+        anti_alias (bool, optional): Whether to apply anti-aliasing to the drawn lines for smoother rendering. Default is True.
+    """
   
         base_image = Image.open(input_path)
         if base_image.mode != 'RGBA':
