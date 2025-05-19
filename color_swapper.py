@@ -40,8 +40,3 @@ def color_swapper(input_path, output_path, blur_radius=0.0):
                 result_image = result_image.convert('RGB')
 
         result_image.save(output_path, 'JPEG')
-
-input_path = ""
-output_path = ""
-blur_radius = 0.2
-color_swapper(input_path, output_path, blur_radius)
