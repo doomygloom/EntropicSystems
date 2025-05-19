@@ -2,6 +2,17 @@ import random
 from PIL import Image, ImageDraw, ImageFilter
 
 def gooey_overlay(input_path, second_image_path, output_path, goo_width=100, goo_height=100):
+    """
+    Creates a gooey overlay effect by sampling a random section from a second image and pasting it onto the base image in a randomly selected grid cell.
+
+    Args:
+        input_path (str): The file path to the base image.
+        second_image_path (str): The file path to the second image from which the overlay section will be sampled.
+        output_path (str): The file path where the resulting image will be saved in JPEG format.
+        goo_width (int, optional): The width of the overlay section to be sampled and pasted. Default is 100 pixels.
+        goo_height (int, optional): The height of the overlay section to be sampled and pasted. Default is 100 pixels.
+    """
+
         base_image = Image.open(input_path)
         if base_image.mode != 'RGB':
                 base_image = base_image.convert('RGB')
