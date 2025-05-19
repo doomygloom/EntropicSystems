@@ -4,6 +4,14 @@ from PIL import Image, ImageEnhance
 
 def auto_levels(input_path, output_path):
 
+        """
+            Adjusts the levels of an image by enhancing contrast for each RGB channel independently.
+
+            Args:
+                input_path (str): The file path to the input image.
+                output_path (str): The file path where the adjusted image will be saved in JPEG format.
+        """
+
         image = Image.open(input_path)
         if image.mode != 'RGB':
                 image = image.convert('RGB')
@@ -49,8 +57,3 @@ def auto_levels(input_path, output_path):
                 adjusted_image = adjusted_image.convert('RGB')
 
         adjusted_image.save(output_path, 'JPEG')
-
-input_path = ""
-output_paty = ""
-
-auto_levels(input_path, output_path)
