@@ -4,6 +4,17 @@ import random
 # X:@owldecoy
 
 def cut_and_shuffle(input_path, output_path, num_pieces=None, edge_thickness=10, max_piece_size=100, blur_edges=False):
+    """
+    Cuts an image into multiple pieces, shuffles them, and pastes them back in random positions, optionally blurring the edges.
+
+    Args:
+        input_path (str): The file path to the input image.
+        output_path (str): The file path where the modified image will be saved in JPEG format.
+        num_pieces (int, optional): The number of pieces to cut the image into. Default is None, meaning the entire image is processed.
+        edge_thickness (int, optional): The thickness of the edge to apply the blur effect if enabled. Default is 10.
+        max_piece_size (int, optional): The maximum size of each piece in pixels. Default is 100.
+        blur_edges (bool, optional): Whether to apply a blur effect to the edges of the pieces. Default is False.
+    """
     image = Image.open(input_path)
     if image.mode != 'RGB':
         image = image.convert('RGB')
@@ -65,6 +76,16 @@ def cut_and_shuffle(input_path, output_path, num_pieces=None, edge_thickness=10,
 
 
 def cut_and_shuffle_region(input_path, output_path, num_pieces=None, region_size=500):
+    """
+    Selects a random region in the image, cuts it into multiple pieces, shuffles them, and pastes them back in random positions.
+
+    Args:
+        input_path (str): The file path to the input image.
+        output_path (str): The file path where the modified image will be saved in JPEG format.
+        num_pieces (int, optional): The number of pieces to cut the region into. Default is None, meaning the entire region is processed.
+        region_size (int, optional): The size of the region to be processed. Default is 500 pixels.
+    """
+
         image = Image.open(input_path)
         if image.mode != 'RGB':
                 image = image.convert('RGB')
