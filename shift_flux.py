@@ -4,7 +4,17 @@ import numpy as np
 
 # X: @owldecoy
 
-def shift_flux(input_path, output_path, shift_range=(-10, 333), row_step=1, max_flux=1000): # 333 == horizontal flux
+def shift_flux(input_path, output_path, shift_range=(-10, 333), row_step=1, max_flux=1000):
+    """
+    Applies a horizontal flux effect by randomly shifting rows of pixels within a specified range, creating a glitch effect.
+
+    Args:
+        input_path (str): The file path to the input image.
+        output_path (str): The file path where the modified image will be saved in JPEG format.
+        shift_range (tuple, optional): The range of pixel shifts to apply, as a tuple of (min_shift, max_shift). Default is (-10, 333).
+        row_step (int, optional): The step size for selecting rows to apply the flux effect. Default is 1 pixel.
+        max_flux (int, optional): The maximum amount of flux applied to the image (currently unused). Default is 1000.
+    """
 
         image = Image.open(input_path)
         if image.mode != 'RGB':
@@ -30,6 +40,17 @@ def shift_flux(input_path, output_path, shift_range=(-10, 333), row_step=1, max_
 
 
 def shift_flux_area(input_path, output_path, shift_range=(-10, 333), row_step=1, max_flux=1000, size=200):
+    """
+    Applies a localized horizontal flux effect to a randomly selected area of the image by shifting rows of pixels within a specified range.
+
+    Args:
+        input_path (str): The file path to the input image.
+        output_path (str): The file path where the modified image will be saved in JPEG format.
+        shift_range (tuple, optional): The range of pixel shifts to apply, as a tuple of (min_shift, max_shift). Default is (-10, 333).
+        row_step (int, optional): The step size for selecting rows to apply the flux effect. Default is 1 pixel.
+        max_flux (int, optional): The maximum amount of flux applied to the selected area (currently unused). Default is 1000.
+        size (int, optional): The size of the square area to be processed. Default is 200 pixels.
+    """
 
         image = Image.open(input_path)
         if image.mode != 'RGB':
