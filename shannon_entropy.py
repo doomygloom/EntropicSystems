@@ -5,7 +5,21 @@ import random
 # X: @owldecoy
 
 def shannon_entropy(input_path, output_path, target_entropy_increase=2.0, num_pieces=10, 
-                         max_piece_size=100, noise_factor=0.1, blur_edges=False, disable_cut_shuffle=False):
+                    max_piece_size=100, noise_factor=0.1, blur_edges=False, disable_cut_shuffle=False):
+    """
+    Applies a Shannon entropy manipulation effect to an image by increasing entropy through noise addition,
+    piece shuffling, and optional edge blurring.
+
+    Args:
+        input_path (str): The file path to the input image.
+        output_path (str): The file path where the modified image will be saved in JPEG format.
+        target_entropy_increase (float, optional): The desired increase in entropy in bits. Default is 2.0.
+        num_pieces (int, optional): The number of pieces to cut the image into for shuffling. Default is 10.
+        max_piece_size (int, optional): The maximum size of each piece in pixels. Default is 100.
+        noise_factor (float, optional): The standard deviation of the noise to be added, as a fraction of 255. Default is 0.1.
+        blur_edges (bool, optional): Whether to apply a blur effect to the edges of each piece. Default is False.
+        disable_cut_shuffle (bool, optional): If True, skips the cut and shuffle step and only applies noise. Default is False.
+    """
     
     image = Image.open(input_path).convert('RGB')
     width, height = image.size
