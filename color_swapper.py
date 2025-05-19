@@ -4,6 +4,14 @@ import numpy as np
 # X:@owldecoy
 
 def color_swapper(input_path, output_path, blur_radius=0.0):
+    """
+    Swaps the dominant color (black or white) in an image to the opposite color and optionally applies a Gaussian blur.
+
+    Args:
+        input_path (str): The file path to the input image.
+        output_path (str): The file path where the modified image will be saved in JPEG format.
+        blur_radius (float, optional): The radius for the Gaussian blur to be applied. Default is 0.0 (no blur).
+    """
         image = Image.open(input_path)
         if image.mode != 'RGB':
                 image = image.convert('RGB')
