@@ -5,6 +5,18 @@ import numpy as np
 # X: @owldecoy
 
 def pixel_sort(input_path, output_path, row_step=20, sort_height=10, angle=0, contrast=False):
+    """
+    Applies a pixel sorting effect to the input image by slicing and sorting pixel rows and optionally rotating the image.
+
+    Args:
+        input_path (str): The file path to the input image.
+        output_path (str): The file path where the modified image will be saved in JPEG format.
+        row_step (int, optional): The step size for selecting rows to apply the sorting effect. Default is 20 pixels.
+        sort_height (int, optional): The height of each segment of pixels to be sorted. Default is 10 pixels.
+        angle (int, optional): The angle to rotate the image before and after applying the sorting effect. Default is 0 degrees.
+        contrast (bool, optional): Whether to enhance the contrast of the final image. Default is False.
+    """
+
 
         image = Image.open(input_path)
         if image.mode != 'RGB':
