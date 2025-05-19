@@ -1,7 +1,8 @@
 # ImageBending
 Modules for applying various effects to images
 
-e.g., `cut_and_shuffle.py`:
+e.g., `cut_and_shuffle.py` + `gooey_overlay.py`:
 
-![image](https://github.com/user-attachments/assets/1df0dd0a-3edd-4729-b971-99b4c007c556)
+![image](https://github.com/user-attachments/assets/cd8bdd52-221b-4d84-8aac-99717413fedc)
+
 
