@@ -3,6 +3,17 @@ import random
 # X: @owldecoy
 
 def glitch_image(input_path, output_path, intensity=5, mode='bit_flip', preserve_header=True):
+    """
+    Applies a glitch effect to an image by manipulating its binary data using various glitch modes.
+
+    Args:
+        input_path (str): The file path to the input image.
+        output_path (str): The file path where the glitched image will be saved.
+        intensity (int, optional): The intensity level of the glitch effect. Higher values increase the severity of the glitch. Default is 5.
+        mode (str, optional): The glitch mode to apply. Options are 'bit_flip' (alters individual bits) or 'byte_shift' (reverses chunks of bytes). Default is 'bit_flip'.
+        preserve_header (bool, optional): Whether to preserve the header of the image to maintain basic image structure. Default is True.
+    """
+
         with open(input_path, 'rb') as f:
                 data = bytearray(f.read())
 
