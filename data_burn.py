@@ -4,6 +4,17 @@ import random
 # X:@owldecoy
 
 def data_burn(input_path, output_path, num_burns=None, burn_length=None, dark_burn=False, light_burn=False):
+    """
+    Creates a data burn effect by replicating a randomly selected horizontal slice of the image downwards, optionally applying a dark or light burn effect.
+
+    Args:
+        input_path (str): The file path to the input image.
+        output_path (str): The file path where the modified image will be saved in JPEG format.
+        num_burns (int, optional): The number of burn lines to apply. Default is None, meaning no burns are applied.
+        burn_length (int, optional): The length of each burn line in pixels. Default is None.
+        dark_burn (bool, optional): Whether to apply a darkening effect to each successive burn line. Default is False.
+        light_burn (bool, optional): Whether to apply a lightening effect to each successive burn line. Default is False.
+    """
 
         image = Image.open(input_path)
         if image.mode != 'RGB':
