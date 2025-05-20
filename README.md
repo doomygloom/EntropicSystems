@@ -1,11 +1,6 @@
-# ImageBending
-Modules for applying various effects to images
+# EntropicSystems
 
-e.g., `cut_and_shuffle.py` + `gooey_overlay.py`:
-
-![image](https://github.com/user-attachments/assets/cd8bdd52-221b-4d84-8aac-99717413fedc)
-
-cut_and_shuffle, chaos_brush, pixel_sort, smear, data_burn+
+`cut_and_shuffle.py`, `chaos_brush.py`, `pixel_sort.py`, `smear.py`, `data_burn.py`+
 ![image](https://github.com/user-attachments/assets/aeef7166-daa1-4a18-b558-a8767963164f)
 
 
