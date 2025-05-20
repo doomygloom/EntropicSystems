@@ -1,5 +1,7 @@
 # EntropicSystems
 
+A bunch of python fuctions for applying various effects on some source image(s).
+
 ## Example
 `cut_and_shuffle.py` + `chaos_brush.py` + `pixel_sort.py` + `smear.py` + `data_burn.py` +
 
